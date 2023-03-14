@@ -196,7 +196,7 @@ def profit_report(parsed_arg):
                     items.append(row)
         if (len(items)) > 0:
             rich_visual(items)
-            print('total profit', parsed_arg.date, '=', 'Є', (len(items)))
+            print('total profit', parsed_arg.date, '=', 'Є', (sum(amount)))
             user_input = input('Store this quary?(y/n): ')
             if user_input.lower() == 'y':
                 save_quary(items)
@@ -204,7 +204,7 @@ def profit_report(parsed_arg):
             elif user_input.lower() == 'n':
                 return
         if (len(items)) == 0:
-            print('total revenue', parsed_arg.date, '=', 'Є', (len(items)))
+            print('total revenue', parsed_arg.date, '=', 'Є', (sum(amount)))
 
 # This function takes in the parsed arguments from the command line and calculates 
 # the total revenue for products sold within the given time period. 
@@ -255,7 +255,7 @@ def revenue_report(parsed_arg):
                     items.append(row)
         if (len(items)) > 0:
             rich_visual(items)
-            print('total revenue', parsed_arg.date, '=', 'Є', (len(items)))
+            print('total revenue', parsed_arg.date, '=', 'Є', (sum(amount)))
             user_input = input('Store this quary?(y/n): ')
             if user_input.lower() == 'y':
                 save_quary(items)
@@ -263,7 +263,7 @@ def revenue_report(parsed_arg):
             elif user_input.lower() == 'n':
                 return
         if (len(items)) == 0:
-            print('total revenue', parsed_arg.date, '=', 'Є', (len(items)))
+            print('total revenue', parsed_arg.date, '=', 'Є', (sum(amount)))
 
 # This function takes in the parsed arguments from the command line and compares
 # which items are valid by expiration date given time period. 
