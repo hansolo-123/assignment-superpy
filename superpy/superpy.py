@@ -156,6 +156,7 @@ def sell(parsed_arg):
 # for all sales within the given time period. 
 # Finally, the function prints a report of the total profit earned within the given time period.
 
+
 def profit_report(parsed_arg):
     items = []
     amount = []
@@ -197,10 +198,10 @@ def profit_report(parsed_arg):
         if (len(items)) > 0:
             rich_visual(items)
             print('total profit', parsed_arg.date, '=', 'Є', (sum(amount)))
-            user_input = input('Store this quary?(y/n): ')
+            user_input = input('store this query result?(y/n): ')
             if user_input.lower() == 'y':
                 save_quary(items)
-                print('quary stored in: stored.csv')
+                print('query result stored in: stored.csv')
             elif user_input.lower() == 'n':
                 return
         if (len(items)) == 0:
@@ -256,10 +257,10 @@ def revenue_report(parsed_arg):
         if (len(items)) > 0:
             rich_visual(items)
             print('total revenue', parsed_arg.date, '=', 'Є', (sum(amount)))
-            user_input = input('Store this quary?(y/n): ')
+            user_input = input('store this query result?(y/n): ')
             if user_input.lower() == 'y':
                 save_quary(items)
-                print('quary stored in: stored.csv')
+                print('query result stored in: stored.csv')
             elif user_input.lower() == 'n':
                 return
         if (len(items)) == 0:
@@ -313,10 +314,10 @@ def stock_report(parsed_arg):
         if (len(items)) > 0:
             rich_visual(items)
             print('total in stock', parsed_arg.date, '=', (len(items)), 'items')
-            user_input = input('Store this quary?(y/n): ')
+            user_input = input('store this query result?(y/n): ')
             if user_input.lower() == 'y':
                 save_quary(items)
-                print('quary stored in: stored.csv')
+                print('query results stored in: stored.csv')
             elif user_input.lower() == 'n':
                 return
         if (len(items)) == 0:
